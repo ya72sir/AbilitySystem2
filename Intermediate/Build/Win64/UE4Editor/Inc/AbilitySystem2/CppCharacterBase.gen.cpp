@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_AquireAbility();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility_NoRegister();
+	ABILITYSYSTEM2_API UClass* Z_Construct_UClass_UCppAttributeSetBase_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 // End Cross Module References
@@ -76,6 +77,10 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttributeBase_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AttributeBase;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AbilitySystemComp_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AbilitySystemComp;
@@ -99,6 +104,14 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACppCharacterBase_Statics::NewProp_AttributeBase_MetaData[] = {
+		{ "Category", "Abilities" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CppCharacterBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACppCharacterBase_Statics::NewProp_AttributeBase = { UE4CodeGen_Private::EPropertyClass::Object, "AttributeBase", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x00100000000a000d, 1, nullptr, STRUCT_OFFSET(ACppCharacterBase, AttributeBase), Z_Construct_UClass_UCppAttributeSetBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACppCharacterBase_Statics::NewProp_AttributeBase_MetaData, ARRAY_COUNT(Z_Construct_UClass_ACppCharacterBase_Statics::NewProp_AttributeBase_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACppCharacterBase_Statics::NewProp_AbilitySystemComp_MetaData[] = {
 		{ "Category", "Abilities" },
 		{ "EditInline", "true" },
@@ -108,6 +121,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACppCharacterBase_Statics::NewProp_AbilitySystemComp = { UE4CodeGen_Private::EPropertyClass::Object, "AbilitySystemComp", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x00100000000a000d, 1, nullptr, STRUCT_OFFSET(ACppCharacterBase, AbilitySystemComp), Z_Construct_UClass_UAbilitySystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACppCharacterBase_Statics::NewProp_AbilitySystemComp_MetaData, ARRAY_COUNT(Z_Construct_UClass_ACppCharacterBase_Statics::NewProp_AbilitySystemComp_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACppCharacterBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACppCharacterBase_Statics::NewProp_AttributeBase,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACppCharacterBase_Statics::NewProp_AbilitySystemComp,
 	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ACppCharacterBase_Statics::InterfaceParams[] = {
@@ -136,7 +150,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACppCharacterBase, 2556158677);
+	IMPLEMENT_CLASS(ACppCharacterBase, 905285058);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ACppCharacterBase(Z_Construct_UClass_ACppCharacterBase, &ACppCharacterBase::StaticClass, TEXT("/Script/AbilitySystem2"), TEXT("ACppCharacterBase"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ACppCharacterBase);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

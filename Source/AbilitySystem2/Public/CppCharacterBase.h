@@ -11,6 +11,7 @@
 
 #include "CppCharacterBase.generated.h"
 
+class UCppAttributeSetBase;
 
 UCLASS(config = Game)
 class ABILITYSYSTEM2_API ACppCharacterBase : public ACharacter, public IAbilitySystemInterface
@@ -35,6 +36,9 @@ public:
 	/** Our ability system */
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Abilities")
 	class UAbilitySystemComponent* AbilitySystemComp;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Abilities")
+	class UCppAttributeSetBase*  AttributeBase;
 
 
 	UAbilitySystemComponent* GetAbilitySystemComponent() const override { return AbilitySystemComp; };
