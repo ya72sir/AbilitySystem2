@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FGenericCrashContext>
+	<RuntimeProperties>
+		<CrashVersion>3</CrashVersion>
+		<CrashGUID>UE4CC-Windows-A59BE57B4B7B91791867E79AFB328290_0000</CrashGUID>
+		<ProcessId>15388</ProcessId>
+		<IsInternalBuild>false</IsInternalBuild>
+		<IsPerforceBuild>false</IsPerforceBuild>
+		<IsSourceDistribution>false</IsSourceDistribution>
+		<IsEnsure>false</IsEnsure>
+		<IsAssert>true</IsAssert>
+		<CrashType>Assert</CrashType>
+		<SecondsSinceStart>0</SecondsSinceStart>
+		<GameName>UE4-AbilitySystem2</GameName>
+		<ExecutableName>UE4Editor</ExecutableName>
+		<BuildConfiguration>Development</BuildConfiguration>
+		<GameSessionID />
+		<Symbols>**UE4*Release-4.21-CL-4753647-Win64-Development</Symbols>
+		<PlatformName>Windows</PlatformName>
+		<PlatformNameIni>Windows</PlatformNameIni>
+		<EngineMode>Editor</EngineMode>
+		<EngineModeEx>Unset</EngineModeEx>
+		<DeploymentName />
+		<EngineVersion>4.21.2-4753647+++UE4+Release-4.21</EngineVersion>
+		<CommandLine>F:\UE_Proj\21\AbilitySystem2\AbilitySystem2.uproject</CommandLine>
+		<LanguageLCID>1049</LanguageLCID>
+		<AppDefaultLocale>ru-RU</AppDefaultLocale>
+		<BuildVersion>++UE4+Release-4.21-CL-4753647</BuildVersion>
+		<IsUE4Release>true</IsUE4Release>
+		<UserName>72gsi</UserName>
+		<BaseDir>F:/UE_4.21/Engine/Binaries/Win64/</BaseDir>
+		<RootDir>F:/UE_4.21/</RootDir>
+		<MachineId>48B9AF1E40401BA23D51C2AE1DEAEADC</MachineId>
+		<LoginId>48b9af1e40401ba23d51c2ae1deaeadc</LoginId>
+		<EpicAccountId>669d81abcf4f493ea240738fd86bce3f</EpicAccountId>
+		<CallStack />
+		<PCallStack>UE4Editor-CoreUObject 0x000000004bc80000 + 3d4236 UE4Editor-CoreUObject 0x000000004bc80000 + 300a2d UE4Editor-AbilitySystem2 0x0000000036440000 + 74bb UE4Editor-CoreUObject 0x000000004bc80000 + 148973 UE4Editor-CoreUObject 0x000000004bc80000 + 4120a8 UE4Editor-CoreUObject 0x000000004bc80000 + 3f819f UE4Editor-CoreUObject 0x000000004bc80000 + 14e977 UE4Editor-Core 0x000000004c330000 + 11ca7e UE4Editor-Core 0x000000004c330000 + 2d9e66 UE4Editor-Projects 0x0000000088ab0000 + 1cfec UE4Editor-Projects 0x0000000088ab0000 + 1d2d4 UE4Editor 0x000000001da10000 + 183a1 UE4Editor 0x000000001da10000 + 1dc6b UE4Editor 0x000000001da10000 + 15783 UE4Editor 0x000000001da10000 + 159ea UE4Editor 0x000000001da10000 + 248da UE4Editor 0x000000001da10000 + 2659a KERNEL32 0x00000000a0190000 + 17bd4 ntdll 0x00000000a0a20000 + 6ced1</PCallStack>
+		<SourceContext />
+		<UserDescription />
+		<UserActivityHint />
+		<ErrorMessage>Fatal error: [File:D:\Build\++UE4\Sync\Engine\Source\Runtime\CoreUObject\Private\UObject\UObjectGlobals.cpp] [Line: 3755] Default subobject CppAttributeSetBase Abilities already exists for CppCharacterBase /Script/AbilitySystem2.Default__CppCharacterBase.</ErrorMessage>
+		<CrashDumpMode>0</CrashDumpMode>
+		<CrashReporterMessage />
+		<Misc.NumberOfCores>2</Misc.NumberOfCores>
+		<Misc.NumberOfCoresIncludingHyperthreads>4</Misc.NumberOfCoresIncludingHyperthreads>
+		<Misc.Is64bitOperatingSystem>1</Misc.Is64bitOperatingSystem>
+		<Misc.CPUVendor>GenuineIntel</Misc.CPUVendor>
+		<Misc.CPUBrand>Intel(R) Core(TM) i3-6100 CPU @ 3.70GHz</Misc.CPUBrand>
+		<Misc.PrimaryGPUBrand>NVIDIA GeForce GTX 770</Misc.PrimaryGPUBrand>
+		<Misc.OSVersionMajor>Windows 10</Misc.OSVersionMajor>
+		<Misc.OSVersionMinor />
+		<GameStateName />
+		<MemoryStats.TotalPhysical>17129717760</MemoryStats.TotalPhysical>
+		<MemoryStats.TotalVirtual>140737488224256</MemoryStats.TotalVirtual>
+		<MemoryStats.PageSize>4096</MemoryStats.PageSize>
+		<MemoryStats.TotalPhysicalGB>16</MemoryStats.TotalPhysicalGB>
+		<MemoryStats.AvailablePhysical>11888959488</MemoryStats.AvailablePhysical>
+		<MemoryStats.AvailableVirtual>140731910582272</MemoryStats.AvailableVirtual>
+		<MemoryStats.UsedPhysical>580288512</MemoryStats.UsedPhysical>
+		<MemoryStats.PeakUsedPhysical>580292608</MemoryStats.PeakUsedPhysical>
+		<MemoryStats.UsedVirtual>601452544</MemoryStats.UsedVirtual>
+		<MemoryStats.PeakUsedVirtual>601452544</MemoryStats.PeakUsedVirtual>
+		<MemoryStats.bIsOOM>0</MemoryStats.bIsOOM>
+		<MemoryStats.OOMAllocationSize>0</MemoryStats.OOMAllocationSize>
+		<MemoryStats.OOMAllocationAlignment>0</MemoryStats.OOMAllocationAlignment>
+		<TimeOfCrash>637201568525330000</TimeOfCrash>
+		<bAllowToBeContacted>1</bAllowToBeContacted>
+		<PlatformFullName>Win64 [Windows 10  64b]</PlatformFullName>
+		<CrashReportClientVersion>1.0</CrashReportClientVersion>
+	</RuntimeProperties>
+	<PlatformProperties>
+		<PlatformIsRunningWindows>1</PlatformIsRunningWindows>
+		<PlatformCallbackResult>0</PlatformCallbackResult>
+	</PlatformProperties>
+</FGenericCrashContext>

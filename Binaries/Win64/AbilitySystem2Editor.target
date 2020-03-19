@@ -18,11 +18,11 @@
 	"Launch": "$(EngineDir)/Binaries/Win64/UE4Editor.exe",
 	"BuildProducts": [
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-AbilitySystem2-7103.dll",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-AbilitySystem2-2047.dll",
 			"Type": "DynamicLibrary"
 		},
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-AbilitySystem2-7103.pdb",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-AbilitySystem2-2047.pdb",
 			"Type": "SymbolFile"
 		},
 		{

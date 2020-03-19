@@ -9,6 +9,8 @@ ACppCharacterBase::ACppCharacterBase()
 	PrimaryActorTick.bCanEverTick = true;
 
 	AbilitySystemComp = CreateDefaultSubobject<UAbilitySystemComponent>("Abilities");
+
+	AttributeBase = CreateDefaultSubobject<UCppAttributeSetBase>("AttributeBase");
 }
 
 // Called when the game starts or when spawned

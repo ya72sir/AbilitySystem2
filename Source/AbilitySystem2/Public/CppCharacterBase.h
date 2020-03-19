@@ -9,9 +9,10 @@
 #include "AbilitySystemComponent.h" 
 #include "Abilities/GameplayAbility.h"
 
+#include "CppAttributeSetBase.h"
+
 #include "CppCharacterBase.generated.h"
 
-class UCppAttributeSetBase;
 
 UCLASS(config = Game)
 class ABILITYSYSTEM2_API ACppCharacterBase : public ACharacter, public IAbilitySystemInterface
