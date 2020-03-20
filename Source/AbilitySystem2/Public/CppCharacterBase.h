@@ -50,6 +50,14 @@ public:
 	void OnHealthChanged(float Health, float MaxHealth);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities", meta = (DisplayName = "EvCppOnHealthChanged"))
-	void BPOnHelathChanged(float Health, float MaxHealth, float percentage);
+	void BP_OnHelathChanged(float Health, float MaxHealth, float percentage);
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities", meta = (DisplayName = "EvCppDie"))
+	void BP_Die();
+
+protected:
+	bool bIsDead = false;
+
+
 
 };

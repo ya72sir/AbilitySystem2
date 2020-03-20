@@ -23,8 +23,8 @@ void EmptyLinkFunctionForGeneratedCodeAbilitySystem2_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/AbilitySystem2",
 				PKG_CompiledIn | 0x00000000,
-				0x1BD8601E,
-				0xF32D6699,
+				0x0302AB55,
+				0xB9A5C498,
 				SingletonFuncArray, ARRAY_COUNT(SingletonFuncArray),
 				METADATA_PARAMS(nullptr, 0)
 			};

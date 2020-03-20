@@ -59,7 +59,7 @@ class UGameplayAbility;
 
 
 #define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_EVENT_PARMS \
-	struct CppCharacterBase_eventBPOnHelathChanged_Parms \
+	struct CppCharacterBase_eventBP_OnHelathChanged_Parms \
 	{ \
 		float Health; \
 		float MaxHealth; \

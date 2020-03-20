@@ -59,7 +59,16 @@ void ACppCharacterBase::AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAqu
 
 void ACppCharacterBase::OnHealthChanged(float Health, float MaxHealth)
 {
+	if (bIsDead) return;
+
+	if (Health <= 0.0f)
+	{
+		BP_Die();
+		bIsDead = true;
+	}
+
 	float percentage = Health / MaxHealth;
-	BPOnHelathChanged(Health, MaxHealth, percentage);
+
+	BP_OnHelathChanged(Health, MaxHealth, percentage);
 
 }
