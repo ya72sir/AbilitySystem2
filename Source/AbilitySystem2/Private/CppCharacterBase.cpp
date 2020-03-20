@@ -2,25 +2,28 @@
 
 #include "CppCharacterBase.h"
 #include "../Public/CppCharacterBase.h"
+#include "AIController.h"
+#include "GameFramework/PlayerController.h"
+#include "BrainComponent.h"
+
 
 // Sets default values
 ACppCharacterBase::ACppCharacterBase()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
 	AbilitySystemComp = CreateDefaultSubobject<UAbilitySystemComponent>("Abilities");
-
 	AttributeBase = CreateDefaultSubobject<UCppAttributeSetBase>("AttributeBase");
+
+	TeamID = 255;
 }
 
 // Called when the game starts or when spawned
 void ACppCharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
-
 	AttributeBase->OnHealthChange.AddDynamic(this, &ACppCharacterBase::OnHealthChanged);
-	
+	AutoDeterminTeamIDbyControllerType();
 }
 
 // Called every frame
@@ -64,11 +67,50 @@ void ACppCharacterBase::OnHealthChanged(float Health, float MaxHealth)
 	if (Health <= 0.0f)
 	{
 		BP_Die();
+		Dead();
 		bIsDead = true;
 	}
 
 	float percentage = Health / MaxHealth;
 
 	BP_OnHelathChanged(Health, MaxHealth, percentage);
+
+}
+
+bool ACppCharacterBase::FCppIsOtherHosttile(ACppCharacterBase * Other)
+{
+	return TeamID != Other->GetTeamID();
+}
+
+uint8 ACppCharacterBase::GetTeamID() const
+{
+	return TeamID;
+}
+
+void ACppCharacterBase::AutoDeterminTeamIDbyControllerType()
+{
+
+	if (GetController() && GetController()->IsPlayerController())
+	{
+		TeamID = 0;
+	}
+
+}
+
+void ACppCharacterBase::Dead()
+{
+	APlayerController* PC = Cast<APlayerController>(GetController());
+
+	if (PC) 
+	{
+		PC->DisableInput(PC);
+	}
+
+	AAIController* AIC = Cast<AAIController>(GetController());
+
+	if (AIC)
+	{
+		AIC->GetBrainComponent()->StopLogic("Dead");
+	}
 
 }

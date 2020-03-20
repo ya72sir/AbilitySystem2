@@ -11,6 +11,7 @@
 
 #include "CppAttributeSetBase.h"
 
+
 #include "CppCharacterBase.generated.h"
 
 
@@ -55,9 +56,15 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities", meta = (DisplayName = "EvCppDie"))
 	void BP_Die();
 
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+	bool FCppIsOtherHosttile(ACppCharacterBase* Other);
+
+	uint8 GetTeamID() const;
+
 protected:
 	bool bIsDead = false;
-
-
+	uint8 TeamID;
+	void AutoDeterminTeamIDbyControllerType();
+	void Dead();
 
 };

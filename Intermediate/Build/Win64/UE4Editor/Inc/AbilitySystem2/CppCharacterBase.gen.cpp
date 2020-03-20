@@ -22,6 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility_NoRegister();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_BP_Die();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_BP_OnHelathChanged();
+	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_OnHealthChanged();
 	ABILITYSYSTEM2_API UClass* Z_Construct_UClass_UCppAttributeSetBase_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
@@ -46,6 +47,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		UClass* Class = ACppCharacterBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "AquireAbility", &ACppCharacterBase::execAquireAbility },
+			{ "FCppIsOtherHosttile", &ACppCharacterBase::execFCppIsOtherHosttile },
 			{ "OnHealthChanged", &ACppCharacterBase::execOnHealthChanged },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
@@ -143,6 +145,48 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics
+	{
+		struct CppCharacterBase_eventFCppIsOtherHosttile_Parms
+		{
+			ACppCharacterBase* Other;
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Other;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((CppCharacterBase_eventFCppIsOtherHosttile_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::NewProp_ReturnValue = { UE4CodeGen_Private::EPropertyClass::Bool, "ReturnValue", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000580, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(CppCharacterBase_eventFCppIsOtherHosttile_Parms), &Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::NewProp_Other = { UE4CodeGen_Private::EPropertyClass::Object, "Other", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000080, 1, nullptr, STRUCT_OFFSET(CppCharacterBase_eventFCppIsOtherHosttile_Parms, Other), Z_Construct_UClass_ACppCharacterBase_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::NewProp_ReturnValue,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::NewProp_Other,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "ModuleRelativePath", "Public/CppCharacterBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACppCharacterBase, "FCppIsOtherHosttile", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, sizeof(CppCharacterBase_eventFCppIsOtherHosttile_Parms), Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::PropPointers), 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ACppCharacterBase_OnHealthChanged_Statics
 	{
 		struct CppCharacterBase_eventOnHealthChanged_Parms
@@ -211,6 +255,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		{ &Z_Construct_UFunction_ACppCharacterBase_AquireAbility, "AquireAbility" }, // 3802016444
 		{ &Z_Construct_UFunction_ACppCharacterBase_BP_Die, "BP_Die" }, // 788880812
 		{ &Z_Construct_UFunction_ACppCharacterBase_BP_OnHelathChanged, "BP_OnHelathChanged" }, // 2453444015
+		{ &Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile, "FCppIsOtherHosttile" }, // 3989734787
 		{ &Z_Construct_UFunction_ACppCharacterBase_OnHealthChanged, "OnHealthChanged" }, // 1187297749
 	};
 #if WITH_METADATA
@@ -267,7 +312,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACppCharacterBase, 641724110);
+	IMPLEMENT_CLASS(ACppCharacterBase, 3706278868);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ACppCharacterBase(Z_Construct_UClass_ACppCharacterBase, &ACppCharacterBase::StaticClass, TEXT("/Script/AbilitySystem2"), TEXT("ACppCharacterBase"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ACppCharacterBase);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

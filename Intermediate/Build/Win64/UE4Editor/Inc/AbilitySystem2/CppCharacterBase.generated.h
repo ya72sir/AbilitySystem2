@@ -8,13 +8,23 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class ACppCharacterBase;
 class UGameplayAbility;
 #ifdef ABILITYSYSTEM2_CppCharacterBase_generated_h
 #error "CppCharacterBase.generated.h already included, missing '#pragma once' in CppCharacterBase.h"
 #endif
 #define ABILITYSYSTEM2_CppCharacterBase_generated_h
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_RPC_WRAPPERS \
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execFCppIsOtherHosttile) \
+	{ \
+		P_GET_OBJECT(ACppCharacterBase,Z_Param_Other); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->FCppIsOtherHosttile(Z_Param_Other); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execOnHealthChanged) \
 	{ \
@@ -36,7 +46,16 @@ class UGameplayAbility;
 	}
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execFCppIsOtherHosttile) \
+	{ \
+		P_GET_OBJECT(ACppCharacterBase,Z_Param_Other); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->FCppIsOtherHosttile(Z_Param_Other); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execOnHealthChanged) \
 	{ \
@@ -58,7 +77,7 @@ class UGameplayAbility;
 	}
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_EVENT_PARMS \
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_EVENT_PARMS \
 	struct CppCharacterBase_eventBP_OnHelathChanged_Parms \
 	{ \
 		float Health; \
@@ -67,8 +86,8 @@ class UGameplayAbility;
 	};
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_CALLBACK_WRAPPERS
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_INCLASS_NO_PURE_DECLS \
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_CALLBACK_WRAPPERS
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACppCharacterBase(); \
 	friend struct Z_Construct_UClass_ACppCharacterBase_Statics; \
@@ -78,7 +97,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ACppCharacterBase*>(this); }
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_INCLASS \
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_INCLASS \
 private: \
 	static void StaticRegisterNativesACppCharacterBase(); \
 	friend struct Z_Construct_UClass_ACppCharacterBase_Statics; \
@@ -88,7 +107,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ACppCharacterBase*>(this); }
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_STANDARD_CONSTRUCTORS \
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ACppCharacterBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACppCharacterBase) \
@@ -101,7 +120,7 @@ private: \
 public:
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_ENHANCED_CONSTRUCTORS \
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACppCharacterBase(ACppCharacterBase&&); \
@@ -112,31 +131,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACppCharacterBase); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACppCharacterBase)
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_PRIVATE_PROPERTY_OFFSET
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_17_PROLOG \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_EVENT_PARMS
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_PRIVATE_PROPERTY_OFFSET
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_18_PROLOG \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_EVENT_PARMS
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_GENERATED_BODY_LEGACY \
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_PRIVATE_PROPERTY_OFFSET \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_RPC_WRAPPERS \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_CALLBACK_WRAPPERS \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_INCLASS \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_STANDARD_CONSTRUCTORS \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_PRIVATE_PROPERTY_OFFSET \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_RPC_WRAPPERS \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_CALLBACK_WRAPPERS \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_INCLASS \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_GENERATED_BODY \
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_PRIVATE_PROPERTY_OFFSET \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_CALLBACK_WRAPPERS \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_INCLASS_NO_PURE_DECLS \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_ENHANCED_CONSTRUCTORS \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_PRIVATE_PROPERTY_OFFSET \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_CALLBACK_WRAPPERS \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_INCLASS_NO_PURE_DECLS \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
