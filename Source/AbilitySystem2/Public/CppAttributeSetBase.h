@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "AttributeSet.h"
+#include "GameplayEffectExtension.h"
+#include "GameplayEffect.h"
 #include "CppAttributeSetBase.generated.h"
 
 /**
@@ -19,5 +21,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AttributeSetBase")
 	FGameplayAttributeData Health;
+
+	virtual  void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData &Data) override;
 	
 };
