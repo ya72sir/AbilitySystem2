@@ -11,17 +11,21 @@
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeAbilitySystem2_init() {}
+	ABILITYSYSTEM2_API UFunction* Z_Construct_UDelegateFunction_AbilitySystem2_OnHealthChangeDelegate__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_AbilitySystem2()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_AbilitySystem2_OnHealthChangeDelegate__DelegateSignature,
+			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/AbilitySystem2",
 				PKG_CompiledIn | 0x00000000,
-				0x253364B3,
-				0xE01C0E41,
-				nullptr, 0,
+				0x07CFD7C1,
+				0xDA42C8B3,
+				SingletonFuncArray, ARRAY_COUNT(SingletonFuncArray),
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

@@ -3,7 +3,8 @@
 #include "CppAttributeSetBase.h"
 
 UCppAttributeSetBase::UCppAttributeSetBase() 
-	:Health(200.0f)
+	:Health(200.0f), 
+	MaxHealth(200.0f)
 {
 
 }
@@ -13,6 +14,8 @@ void UCppAttributeSetBase::PostGameplayEffectExecute(const struct FGameplayEffec
 	if (Data.EvaluatedData.Attribute.GetUProperty() == FindFieldChecked<UProperty>(UCppAttributeSetBase::StaticClass(), GET_MEMBER_NAME_CHECKED(UCppAttributeSetBase, Health)))
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Damage, %f"), Health.GetCurrentValue());
+
+		OnHealthChange.Broadcast(Health.GetCurrentValue(), MaxHealth.GetCurrentValue());
 	
 	}
 }
