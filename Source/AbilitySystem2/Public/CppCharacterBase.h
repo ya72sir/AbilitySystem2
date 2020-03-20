@@ -41,10 +41,15 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Abilities")
 	class UCppAttributeSetBase*  AttributeBase;
 
-
 	UAbilitySystemComponent* GetAbilitySystemComponent() const override { return AbilitySystemComp; };
 
 	UFUNCTION(BlueprintCallable, Category = "Abilities")
 	void AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAquire);
+
+	UFUNCTION()
+	void OnHealthChanged(float Health, float MaxHealth);
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities", meta = (DisplayName = "EvCppOnHealthChanged"))
+	void BPOnHelathChanged(float Health, float MaxHealth, float percentage);
 
 };

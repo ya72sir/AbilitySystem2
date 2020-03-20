@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CppCharacterBase.h"
+#include "../Public/CppCharacterBase.h"
 
 // Sets default values
 ACppCharacterBase::ACppCharacterBase()
@@ -17,6 +18,8 @@ ACppCharacterBase::ACppCharacterBase()
 void ACppCharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
+
+	AttributeBase->OnHealthChange.AddDynamic(this, &ACppCharacterBase::OnHealthChanged);
 	
 }
 
@@ -54,3 +57,9 @@ void ACppCharacterBase::AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAqu
 	}
 }
 
+void ACppCharacterBase::OnHealthChanged(float Health, float MaxHealth)
+{
+	float percentage = Health / MaxHealth;
+	BPOnHelathChanged(Health, MaxHealth, percentage);
+
+}

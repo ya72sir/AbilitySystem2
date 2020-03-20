@@ -16,6 +16,16 @@ class UGameplayAbility;
 
 #define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execOnHealthChanged) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_Health); \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_MaxHealth); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnHealthChanged(Z_Param_Health,Z_Param_MaxHealth); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execAquireAbility) \
 	{ \
 		P_GET_OBJECT(UClass,Z_Param_AbilityToAquire); \
@@ -28,6 +38,16 @@ class UGameplayAbility;
 
 #define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execOnHealthChanged) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_Health); \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_MaxHealth); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnHealthChanged(Z_Param_Health,Z_Param_MaxHealth); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execAquireAbility) \
 	{ \
 		P_GET_OBJECT(UClass,Z_Param_AbilityToAquire); \
@@ -38,6 +58,16 @@ class UGameplayAbility;
 	}
 
 
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_EVENT_PARMS \
+	struct CppCharacterBase_eventBPOnHelathChanged_Parms \
+	{ \
+		float Health; \
+		float MaxHealth; \
+		float percentage; \
+	};
+
+
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_CALLBACK_WRAPPERS
 #define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACppCharacterBase(); \
@@ -83,12 +113,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACppCharacterBase); \
 
 
 #define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_PRIVATE_PROPERTY_OFFSET
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_17_PROLOG
+#define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_17_PROLOG \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_EVENT_PARMS
+
+
 #define AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_PRIVATE_PROPERTY_OFFSET \
 	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_RPC_WRAPPERS \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_CALLBACK_WRAPPERS \
 	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_INCLASS \
 	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_STANDARD_CONSTRUCTORS \
 public: \
@@ -100,6 +134,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_PRIVATE_PROPERTY_OFFSET \
 	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_CALLBACK_WRAPPERS \
 	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_INCLASS_NO_PURE_DECLS \
 	AbilitySystem2_Source_AbilitySystem2_Public_CppCharacterBase_h_20_ENHANCED_CONSTRUCTORS \
 private: \
