@@ -70,6 +70,22 @@ void EmptyLinkFunctionForGeneratedCodeCppAttributeSetBase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxStrength_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MaxStrength;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Strength_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Strength;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxMana_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MaxMana;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Mana_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Mana;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxHealth_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MaxHealth;
@@ -92,6 +108,36 @@ void EmptyLinkFunctionForGeneratedCodeCppAttributeSetBase() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxStrength_MetaData[] = {
+		{ "Category", "AttributeSetBase" },
+		{ "ModuleRelativePath", "Public/CppAttributeSetBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxStrength = { UE4CodeGen_Private::EPropertyClass::Struct, "MaxStrength", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000005, 1, nullptr, STRUCT_OFFSET(UCppAttributeSetBase, MaxStrength), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxStrength_MetaData, ARRAY_COUNT(Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxStrength_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Strength_MetaData[] = {
+		{ "Category", "AttributeSetBase" },
+		{ "ModuleRelativePath", "Public/CppAttributeSetBase.h" },
+		{ "ToolTip", "Start Strength" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Strength = { UE4CodeGen_Private::EPropertyClass::Struct, "Strength", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000005, 1, nullptr, STRUCT_OFFSET(UCppAttributeSetBase, Strength), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Strength_MetaData, ARRAY_COUNT(Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Strength_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxMana_MetaData[] = {
+		{ "Category", "AttributeSetBase" },
+		{ "ModuleRelativePath", "Public/CppAttributeSetBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxMana = { UE4CodeGen_Private::EPropertyClass::Struct, "MaxMana", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000005, 1, nullptr, STRUCT_OFFSET(UCppAttributeSetBase, MaxMana), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxMana_MetaData, ARRAY_COUNT(Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxMana_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Mana_MetaData[] = {
+		{ "Category", "AttributeSetBase" },
+		{ "ModuleRelativePath", "Public/CppAttributeSetBase.h" },
+		{ "ToolTip", "Start Mana" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Mana = { UE4CodeGen_Private::EPropertyClass::Struct, "Mana", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000005, 1, nullptr, STRUCT_OFFSET(UCppAttributeSetBase, Mana), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Mana_MetaData, ARRAY_COUNT(Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Mana_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxHealth_MetaData[] = {
 		{ "Category", "AttributeSetBase" },
 		{ "ModuleRelativePath", "Public/CppAttributeSetBase.h" },
@@ -102,10 +148,15 @@ void EmptyLinkFunctionForGeneratedCodeCppAttributeSetBase() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Health_MetaData[] = {
 		{ "Category", "AttributeSetBase" },
 		{ "ModuleRelativePath", "Public/CppAttributeSetBase.h" },
+		{ "ToolTip", "Start Health" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Health = { UE4CodeGen_Private::EPropertyClass::Struct, "Health", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000005, 1, nullptr, STRUCT_OFFSET(UCppAttributeSetBase, Health), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Health_MetaData, ARRAY_COUNT(Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Health_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCppAttributeSetBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxStrength,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Strength,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxMana,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Mana,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_MaxHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCppAttributeSetBase_Statics::NewProp_Health,
 	};
@@ -132,7 +183,7 @@ void EmptyLinkFunctionForGeneratedCodeCppAttributeSetBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCppAttributeSetBase, 321266420);
+	IMPLEMENT_CLASS(UCppAttributeSetBase, 3792930890);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UCppAttributeSetBase(Z_Construct_UClass_UCppAttributeSetBase, &UCppAttributeSetBase::StaticClass, TEXT("/Script/AbilitySystem2"), TEXT("UCppAttributeSetBase"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UCppAttributeSetBase);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

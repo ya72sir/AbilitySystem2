@@ -47,11 +47,24 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Abilities")
 	void AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAquire);
 
+
+	/* START changes param */
 	UFUNCTION()
 	void OnHealthChanged(float Health, float MaxHealth);
-
 	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities", meta = (DisplayName = "EvCppOnHealthChanged"))
 	void BP_OnHelathChanged(float Health, float MaxHealth, float percentage);
+
+	UFUNCTION()
+	void OnManaChanged(float Mana, float MaxMana);
+	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities", meta = (DisplayName = "EvCppOnManaChanged"))
+	void BP_OnManaChanged(float Mana, float MaxMana, float percentage);
+
+	UFUNCTION()
+	void OnStrengthChanged(float Strength, float MaxStrength);
+	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities", meta = (DisplayName = "EvCppOnStrengthChanged"))
+	void BP_OnStrengthChanged(float Strength, float MaxStrength, float percentage);
+
+	/* END changes param */
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities", meta = (DisplayName = "EvCppDie"))
 	void BP_Die();

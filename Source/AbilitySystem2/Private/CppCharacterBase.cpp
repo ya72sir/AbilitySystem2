@@ -23,6 +23,8 @@ void ACppCharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
 	AttributeBase->OnHealthChange.AddDynamic(this, &ACppCharacterBase::OnHealthChanged);
+	AttributeBase->OnManaChange.AddDynamic(this, &ACppCharacterBase::OnManaChanged);
+	AttributeBase->OnStrengthChange.AddDynamic(this, &ACppCharacterBase::OnStrengthChanged);
 	AutoDeterminTeamIDbyControllerType();
 }
 
@@ -74,7 +76,18 @@ void ACppCharacterBase::OnHealthChanged(float Health, float MaxHealth)
 	float percentage = Health / MaxHealth;
 
 	BP_OnHelathChanged(Health, MaxHealth, percentage);
+}
 
+void ACppCharacterBase::OnManaChanged(float Mana, float MaxMana)
+{
+	float Percentage = Mana / MaxMana;
+	BP_OnManaChanged(Mana, MaxMana, Percentage);
+}
+
+void ACppCharacterBase::OnStrengthChanged(float Strength, float MaxStrength)
+{
+	float Percentage = Strength / MaxStrength;
+	BP_OnStrengthChanged(Strength, MaxStrength, Percentage);
 }
 
 bool ACppCharacterBase::FCppIsOtherHosttile(ACppCharacterBase * Other)

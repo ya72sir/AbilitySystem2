@@ -26,6 +26,26 @@ class UGameplayAbility;
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execOnStrengthChanged) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_Strength); \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_MaxStrength); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnStrengthChanged(Z_Param_Strength,Z_Param_MaxStrength); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execOnManaChanged) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_Mana); \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_MaxMana); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnManaChanged(Z_Param_Mana,Z_Param_MaxMana); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execOnHealthChanged) \
 	{ \
 		P_GET_PROPERTY(UFloatProperty,Z_Param_Health); \
@@ -57,6 +77,26 @@ class UGameplayAbility;
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execOnStrengthChanged) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_Strength); \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_MaxStrength); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnStrengthChanged(Z_Param_Strength,Z_Param_MaxStrength); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execOnManaChanged) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_Mana); \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_MaxMana); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnManaChanged(Z_Param_Mana,Z_Param_MaxMana); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execOnHealthChanged) \
 	{ \
 		P_GET_PROPERTY(UFloatProperty,Z_Param_Health); \
@@ -82,6 +122,18 @@ class UGameplayAbility;
 	{ \
 		float Health; \
 		float MaxHealth; \
+		float percentage; \
+	}; \
+	struct CppCharacterBase_eventBP_OnManaChanged_Parms \
+	{ \
+		float Mana; \
+		float MaxMana; \
+		float percentage; \
+	}; \
+	struct CppCharacterBase_eventBP_OnStrengthChanged_Parms \
+	{ \
+		float Strength; \
+		float MaxStrength; \
 		float percentage; \
 	};
 

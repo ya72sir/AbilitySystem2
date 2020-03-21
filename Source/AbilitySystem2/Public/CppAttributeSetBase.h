@@ -22,15 +22,35 @@ class ABILITYSYSTEM2_API UCppAttributeSetBase : public UAttributeSet
 public:
 	UCppAttributeSetBase();
 
+	/* Start Health */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AttributeSetBase")
 	FGameplayAttributeData Health;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AttributeSetBase")
 	FGameplayAttributeData MaxHealth;
+	/* End Health */
+
+	/* Start Mana */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AttributeSetBase")
+		FGameplayAttributeData Mana;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AttributeSetBase")
+		FGameplayAttributeData MaxMana;
+	/* End Mana */
+
+	/* Start Strength */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AttributeSetBase")
+		FGameplayAttributeData Strength;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AttributeSetBase")
+		FGameplayAttributeData MaxStrength;
+	/* End Strength */
 
 	virtual  void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData &Data) override;
 	
 	FOnHealthChangeDelegate OnHealthChange;
+	FOnHealthChangeDelegate OnManaChange;
+	FOnHealthChangeDelegate OnStrengthChange;
 
 
 };
