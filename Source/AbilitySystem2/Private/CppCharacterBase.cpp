@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "CppCharacterBase.h"
-#include "../Public/CppCharacterBase.h"
+#include "CppAttributeSetBase.h"
 #include "AIController.h"
 #include "GameFramework/PlayerController.h"
 #include "BrainComponent.h"
+#include "CppCharacterBase.h"
 
 
 // Sets default values

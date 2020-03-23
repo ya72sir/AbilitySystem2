@@ -3,20 +3,16 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
 
+#include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h" 
 #include "AbilitySystemComponent.h" 
 #include "Abilities/GameplayAbility.h"
 
-#include "CppAttributeSetBase.h"
-
-
 #include "CppCharacterBase.generated.h"
 
 
-UCLASS(config = Game)
-class ABILITYSYSTEM2_API ACppCharacterBase : public ACharacter, public IAbilitySystemInterface
+ class ABILITYSYSTEM2_API ACppCharacterBase : public ACharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 
@@ -48,7 +44,7 @@ public:
 	void AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAquire);
 
 
-	/* START changes param */
+	/** START changes param */
 	UFUNCTION()
 	void OnHealthChanged(float Health, float MaxHealth);
 	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities", meta = (DisplayName = "EvCppOnHealthChanged"))
@@ -64,7 +60,7 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities", meta = (DisplayName = "EvCppOnStrengthChanged"))
 	void BP_OnStrengthChanged(float Strength, float MaxStrength, float percentage);
 
-	/* END changes param */
+	/** END changes param */
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities", meta = (DisplayName = "EvCppDie"))
 	void BP_Die();

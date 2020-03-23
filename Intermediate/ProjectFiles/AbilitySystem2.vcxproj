@@ -147,7 +147,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B4DB1EC4-46BA-40FD-A4A2-C01A6D369365}</ProjectGuid>
+    <ProjectGuid>{3FEB7335-93CB-4FC6-915D-33CF2C0C60B3}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>AbilitySystem2</RootNamespace>
     <PlatformToolset>v141</PlatformToolset>

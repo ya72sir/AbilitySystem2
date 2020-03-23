@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\AbilitySystem2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{9E62AEE6-C17B-42D1-B1E2-39EAD6C9FFE5}</UniqueIdentifier>
+      <UniqueIdentifier>{7A0C8479-1971-496E-A95D-79AB16E4E708}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AbilitySystem2.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{B841573E-5DBD-489F-95F0-AF20894A5F9D}</UniqueIdentifier>
+      <UniqueIdentifier>{147030B5-4D32-4232-904E-7454C9686A97}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -33,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\AbilitySystem2">
-      <UniqueIdentifier>{0829467C-AE9D-4BDE-ADA9-CA65F3EEFF87}</UniqueIdentifier>
+      <UniqueIdentifier>{CF7CE42C-5FBE-4917-96FC-F475D7A6B887}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AbilitySystem2\AbilitySystem2.Build.cs">
       <Filter>Source\AbilitySystem2</Filter>
@@ -69,7 +69,7 @@
       <Filter>Source\AbilitySystem2</Filter>
     </ClInclude>
     <Filter Include="Source\AbilitySystem2\Private">
-      <UniqueIdentifier>{64F5C11F-BB4E-4B5A-AEAD-0C5BE17B3789}</UniqueIdentifier>
+      <UniqueIdentifier>{E2733E6C-D710-4E25-9E7F-82BDE622B111}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\AbilitySystem2\Private\CppAttributeSetBase.cpp">
       <Filter>Source\AbilitySystem2\Private</Filter>
@@ -81,7 +81,7 @@
       <Filter>Source\AbilitySystem2\Private</Filter>
     </ClCompile>
     <Filter Include="Source\AbilitySystem2\Public">
-      <UniqueIdentifier>{1ED38854-06A9-4F4C-9F0D-A59997251406}</UniqueIdentifier>
+      <UniqueIdentifier>{5872A424-641D-4419-9B42-1E9F5C496835}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\AbilitySystem2\Public\CppAttributeSetBase.h">
       <Filter>Source\AbilitySystem2\Public</Filter>
