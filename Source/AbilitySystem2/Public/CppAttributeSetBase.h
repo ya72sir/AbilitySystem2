@@ -6,6 +6,8 @@
 #include "AttributeSet.h"
 #include "GameplayEffectExtension.h"
 #include "GameplayEffect.h"
+#include "CppCharacterBase.h"
+
 #include "CppAttributeSetBase.generated.h"
 
 /**

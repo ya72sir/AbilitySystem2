@@ -6,10 +6,13 @@ UCppAttributeSetBase::UCppAttributeSetBase()
 	:Health(200.0f), 
 	MaxHealth(200.0f),
 	Mana(100.0f),
-	MaxMana(150.0f),
+	MaxMana(100.0f),
 	Strength(250.0f),
 	MaxStrength(250.0f)
 {
+	
+
+
 
 }
 
@@ -24,6 +27,27 @@ void UCppAttributeSetBase::PostGameplayEffectExecute(const struct FGameplayEffec
 		UE_LOG(LogTemp, Warning, TEXT("Damage, %f"), Health.GetCurrentValue());
 
 		OnHealthChange.Broadcast(Health.GetCurrentValue(), MaxHealth.GetCurrentValue());
+		
+		/******* Start - Change logic to work with health attr */
+
+		ACppCharacterBase* CharacterOwner = Cast<ACppCharacterBase>(GetOwningActor());
+		
+		if (Health.GetCurrentValue() == MaxHealth.GetCurrentValue())
+		{
+			if (CharacterOwner)
+			{
+				CharacterOwner->AddGameplayTag(CharacterOwner->FullHealthTag);
+			}
+		}
+		else
+		{
+			if (CharacterOwner)
+			{
+				CharacterOwner->RemoveGameplayTag(CharacterOwner->FullHealthTag);
+			}
+		}
+
+		/******* End - Change logic to work with health attr */
 	
 	}
 	/* End Mana */

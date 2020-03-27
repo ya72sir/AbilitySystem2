@@ -1,4 +1,4 @@
-// Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -51,14 +51,18 @@ void EmptyLinkFunctionForGeneratedCodeAbilitySystem2GameMode() {}
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AAbilitySystem2GameMode_Statics::ClassParams = {
 		&AAbilitySystem2GameMode::StaticClass,
-		DependentSingletons, ARRAY_COUNT(DependentSingletons),
-		0x008802A8u,
-		nullptr, 0,
-		nullptr, 0,
-		nullptr,
+		"Game",
 		&StaticCppClassTypeInfo,
-		nullptr, 0,
-		METADATA_PARAMS(Z_Construct_UClass_AAbilitySystem2GameMode_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_AAbilitySystem2GameMode_Statics::Class_MetaDataParams))
+		DependentSingletons,
+		nullptr,
+		nullptr,
+		nullptr,
+		UE_ARRAY_COUNT(DependentSingletons),
+		0,
+		0,
+		0,
+		0x008802ACu,
+		METADATA_PARAMS(Z_Construct_UClass_AAbilitySystem2GameMode_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AAbilitySystem2GameMode_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_AAbilitySystem2GameMode()
 	{
@@ -69,7 +73,11 @@ void EmptyLinkFunctionForGeneratedCodeAbilitySystem2GameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAbilitySystem2GameMode, 4177984093);
+	IMPLEMENT_CLASS(AAbilitySystem2GameMode, 3716428205);
+	template<> ABILITYSYSTEM2_API UClass* StaticClass<AAbilitySystem2GameMode>()
+	{
+		return AAbilitySystem2GameMode::StaticClass();
+	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAbilitySystem2GameMode(Z_Construct_UClass_AAbilitySystem2GameMode, &AAbilitySystem2GameMode::StaticClass, TEXT("/Script/AbilitySystem2"), TEXT("AAbilitySystem2GameMode"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAbilitySystem2GameMode);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

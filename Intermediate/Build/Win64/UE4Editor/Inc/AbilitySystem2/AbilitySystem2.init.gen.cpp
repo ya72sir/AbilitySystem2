@@ -1,4 +1,4 @@
-// Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -22,10 +22,11 @@ void EmptyLinkFunctionForGeneratedCodeAbilitySystem2_init() {}
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/AbilitySystem2",
+				SingletonFuncArray,
+				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x88070C14,
-				0x767F5381,
-				SingletonFuncArray, ARRAY_COUNT(SingletonFuncArray),
+				0x62A60EE6,
+				0xE95E5056,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

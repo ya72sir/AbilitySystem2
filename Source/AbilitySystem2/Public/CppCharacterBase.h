@@ -4,13 +4,15 @@
 
 #include "CoreMinimal.h"
 
-#include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h" 
 #include "AbilitySystemComponent.h" 
 #include "Abilities/GameplayAbility.h"
 
+#include "GameFramework/Character.h"
+
 #include "CppCharacterBase.generated.h"
 
+UCLASS()
 
  class ABILITYSYSTEM2_API ACppCharacterBase : public ACharacter, public IAbilitySystemInterface
 {
@@ -69,6 +71,15 @@ public:
 	bool FCppIsOtherHosttile(ACppCharacterBase* Other);
 
 	uint8 GetTeamID() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+	void AddGameplayTag(FGameplayTag& TagToAdd);
+
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+	void RemoveGameplayTag(FGameplayTag& TagToRemove);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities")
+	FGameplayTag FullHealthTag;
 
 protected:
 	bool bIsDead = false;

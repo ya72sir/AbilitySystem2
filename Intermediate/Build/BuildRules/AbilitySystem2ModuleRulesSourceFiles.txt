@@ -1,3 +1,0 @@
-F:\UE_Proj\21\AbilitySystem2\Source\AbilitySystem2\AbilitySystem2.Build.cs
-F:\UE_Proj\21\AbilitySystem2\Source\AbilitySystem2.Target.cs
-F:\UE_Proj\21\AbilitySystem2\Source\AbilitySystem2Editor.Target.cs

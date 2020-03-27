@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "CppCharacterBase.h"
 #include "CppAttributeSetBase.h"
 #include "AIController.h"
 #include "GameFramework/PlayerController.h"
 #include "BrainComponent.h"
-#include "CppCharacterBase.h"
 
 
 // Sets default values
@@ -22,24 +22,25 @@ ACppCharacterBase::ACppCharacterBase()
 void ACppCharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
+
 	AttributeBase->OnHealthChange.AddDynamic(this, &ACppCharacterBase::OnHealthChanged);
 	AttributeBase->OnManaChange.AddDynamic(this, &ACppCharacterBase::OnManaChanged);
 	AttributeBase->OnStrengthChange.AddDynamic(this, &ACppCharacterBase::OnStrengthChanged);
+
 	AutoDeterminTeamIDbyControllerType();
+	AddGameplayTag(FullHealthTag);
 }
 
 // Called every frame
 void ACppCharacterBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input
 void ACppCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
 
 
@@ -55,7 +56,6 @@ void ACppCharacterBase::AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAqu
 			AbilitySystemComp->GiveAbility(AbilitySpec);
 
 			//AbilitySystemComp->GiveAbility(FGameplayAbilitySpec(AbilityToAquire, 1, 0));
-
 		}
 
 		AbilitySystemComp->InitAbilityActorInfo(this, this);
@@ -98,6 +98,17 @@ bool ACppCharacterBase::FCppIsOtherHosttile(ACppCharacterBase * Other)
 uint8 ACppCharacterBase::GetTeamID() const
 {
 	return TeamID;
+}
+
+void ACppCharacterBase::AddGameplayTag(FGameplayTag& TagToAdd)
+{
+	GetAbilitySystemComponent()->AddLooseGameplayTag(TagToAdd);
+	GetAbilitySystemComponent()->SetTagMapCount(TagToAdd, 1);
+}
+
+void ACppCharacterBase::RemoveGameplayTag(FGameplayTag& TagToRemove)
+{
+	GetAbilitySystemComponent()->RemoveLooseGameplayTag(TagToRemove);
 }
 
 void ACppCharacterBase::AutoDeterminTeamIDbyControllerType()

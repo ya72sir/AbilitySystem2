@@ -1,0 +1,11 @@
+F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Development\AbilitySystem2\Definitions.AbilitySystem2.h
+f:\abilitysys\source\abilitysystem2\AbilitySystem2Projectile.h
+F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Inc\AbilitySystem2\AbilitySystem2Projectile.generated.h
+F:\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
+F:\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+F:\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+F:\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
+F:\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
+F:\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+F:\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+F:\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h

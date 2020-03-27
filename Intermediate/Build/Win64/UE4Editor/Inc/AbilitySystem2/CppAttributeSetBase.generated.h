@@ -1,4 +1,4 @@
-// Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ABILITYSYSTEM2_CppAttributeSetBase_generated_h
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_15_DELEGATE \
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_17_DELEGATE \
 struct _Script_AbilitySystem2_eventOnHealthChangeDelegate_Parms \
 { \
 	float Health; \
@@ -28,9 +28,10 @@ static inline void FOnHealthChangeDelegate_DelegateWrapper(const FMulticastScrip
 }
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_RPC_WRAPPERS
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_INCLASS_NO_PURE_DECLS \
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_SPARSE_DATA
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_RPC_WRAPPERS
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_RPC_WRAPPERS_NO_PURE_DECLS
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCppAttributeSetBase(); \
 	friend struct Z_Construct_UClass_UCppAttributeSetBase_Statics; \
@@ -39,7 +40,7 @@ public: \
 	DECLARE_SERIALIZER(UCppAttributeSetBase)
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_INCLASS \
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_INCLASS \
 private: \
 	static void StaticRegisterNativesUCppAttributeSetBase(); \
 	friend struct Z_Construct_UClass_UCppAttributeSetBase_Statics; \
@@ -48,7 +49,7 @@ public: \
 	DECLARE_SERIALIZER(UCppAttributeSetBase)
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_STANDARD_CONSTRUCTORS \
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCppAttributeSetBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCppAttributeSetBase) \
@@ -61,7 +62,7 @@ private: \
 public:
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_ENHANCED_CONSTRUCTORS \
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UCppAttributeSetBase(UCppAttributeSetBase&&); \
@@ -72,32 +73,36 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCppAttributeSetBase); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UCppAttributeSetBase)
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_PRIVATE_PROPERTY_OFFSET
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_17_PROLOG
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_GENERATED_BODY_LEGACY \
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_PRIVATE_PROPERTY_OFFSET
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_19_PROLOG
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_PRIVATE_PROPERTY_OFFSET \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_RPC_WRAPPERS \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_INCLASS \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_STANDARD_CONSTRUCTORS \
+	AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_PRIVATE_PROPERTY_OFFSET \
+	AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_SPARSE_DATA \
+	AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_RPC_WRAPPERS \
+	AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_INCLASS \
+	AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_GENERATED_BODY \
+#define AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_PRIVATE_PROPERTY_OFFSET \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_INCLASS_NO_PURE_DECLS \
-	AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h_20_ENHANCED_CONSTRUCTORS \
+	AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_PRIVATE_PROPERTY_OFFSET \
+	AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_SPARSE_DATA \
+	AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_INCLASS_NO_PURE_DECLS \
+	AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
+template<> ABILITYSYSTEM2_API UClass* StaticClass<class UCppAttributeSetBase>();
+
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID AbilitySystem2_Source_AbilitySystem2_Public_CppAttributeSetBase_h
+#define CURRENT_FILE_ID AbilitySys_Source_AbilitySystem2_Public_CppAttributeSetBase_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

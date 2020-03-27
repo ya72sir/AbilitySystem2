@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "AbilitySystem2",
+			"Path": "F:\\AbilitySys\\Source\\AbilitySystem2.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "AbilitySystem2Editor",
+			"Path": "F:\\AbilitySys\\Source\\AbilitySystem2Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

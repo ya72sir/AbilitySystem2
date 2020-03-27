@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\AbilitySystem2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{7A0C8479-1971-496E-A95D-79AB16E4E708}</UniqueIdentifier>
+      <UniqueIdentifier>{3EEDD9C2-748F-4DC8-BD98-C007EAB0D65C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AbilitySystem2.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,10 @@
     <None Include="..\..\Source\AbilitySystem2Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{147030B5-4D32-4232-904E-7454C9686A97}</UniqueIdentifier>
+      <UniqueIdentifier>{448468C1-6768-4310-B22A-9A4195B679D1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -33,7 +35,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\AbilitySystem2">
-      <UniqueIdentifier>{CF7CE42C-5FBE-4917-96FC-F475D7A6B887}</UniqueIdentifier>
+      <UniqueIdentifier>{88028659-2B10-4063-9CF2-705DC3B58676}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AbilitySystem2\AbilitySystem2.Build.cs">
       <Filter>Source\AbilitySystem2</Filter>
@@ -69,7 +71,7 @@
       <Filter>Source\AbilitySystem2</Filter>
     </ClInclude>
     <Filter Include="Source\AbilitySystem2\Private">
-      <UniqueIdentifier>{E2733E6C-D710-4E25-9E7F-82BDE622B111}</UniqueIdentifier>
+      <UniqueIdentifier>{1B79DA39-9064-4542-8849-6C2B2AB40B2B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\AbilitySystem2\Private\CppAttributeSetBase.cpp">
       <Filter>Source\AbilitySystem2\Private</Filter>
@@ -81,7 +83,7 @@
       <Filter>Source\AbilitySystem2\Private</Filter>
     </ClCompile>
     <Filter Include="Source\AbilitySystem2\Public">
-      <UniqueIdentifier>{5872A424-641D-4419-9B42-1E9F5C496835}</UniqueIdentifier>
+      <UniqueIdentifier>{A44964A4-2E86-44BC-ABA1-1B6664AFE475}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\AbilitySystem2\Public\CppAttributeSetBase.h">
       <Filter>Source\AbilitySystem2\Public</Filter>

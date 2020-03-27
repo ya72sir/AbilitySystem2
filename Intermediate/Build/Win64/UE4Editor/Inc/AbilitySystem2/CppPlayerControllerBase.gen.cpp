@@ -1,4 +1,4 @@
-// Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -40,6 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeCppPlayerControllerBase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACppPlayerControllerBase_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "CppPlayerControllerBase.h" },
 		{ "ModuleRelativePath", "Public/CppPlayerControllerBase.h" },
@@ -50,14 +51,18 @@ void EmptyLinkFunctionForGeneratedCodeCppPlayerControllerBase() {}
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ACppPlayerControllerBase_Statics::ClassParams = {
 		&ACppPlayerControllerBase::StaticClass,
-		DependentSingletons, ARRAY_COUNT(DependentSingletons),
-		0x009002A4u,
-		nullptr, 0,
-		nullptr, 0,
 		"Game",
 		&StaticCppClassTypeInfo,
-		nullptr, 0,
-		METADATA_PARAMS(Z_Construct_UClass_ACppPlayerControllerBase_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_ACppPlayerControllerBase_Statics::Class_MetaDataParams))
+		DependentSingletons,
+		nullptr,
+		nullptr,
+		nullptr,
+		UE_ARRAY_COUNT(DependentSingletons),
+		0,
+		0,
+		0,
+		0x009002A4u,
+		METADATA_PARAMS(Z_Construct_UClass_ACppPlayerControllerBase_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ACppPlayerControllerBase_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_ACppPlayerControllerBase()
 	{
@@ -68,7 +73,11 @@ void EmptyLinkFunctionForGeneratedCodeCppPlayerControllerBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACppPlayerControllerBase, 3015720286);
+	IMPLEMENT_CLASS(ACppPlayerControllerBase, 4203294827);
+	template<> ABILITYSYSTEM2_API UClass* StaticClass<ACppPlayerControllerBase>()
+	{
+		return ACppPlayerControllerBase::StaticClass();
+	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ACppPlayerControllerBase(Z_Construct_UClass_ACppPlayerControllerBase, &ACppPlayerControllerBase::StaticClass, TEXT("/Script/AbilitySystem2"), TEXT("ACppPlayerControllerBase"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ACppPlayerControllerBase);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
