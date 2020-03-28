@@ -62,6 +62,22 @@ void ACppCharacterBase::AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAqu
 	}
 }
 
+void ACppCharacterBase::AquireAbilitys(TArray<TSubclassOf<UGameplayAbility>> AbilityToAquires)
+{
+	for (TSubclassOf<UGameplayAbility> AbilityItem : AbilityToAquires)
+	{
+		AquireAbility(AbilityItem);
+		
+		if (AbilityItem->IsChildOf(UCppGameplayAbilityBase::StaticClass()))
+		{
+			TSubclassOf<UCppGameplayAbilityBase> AbilityBaseClass = *AbilityItem;
+			
+			if (AbilityBaseClass != nullptr) AddAbilityToUI(AbilityBaseClass);
+		
+		}
+	}
+}
+
 void ACppCharacterBase::OnHealthChanged(float Health, float MaxHealth)
 {
 	if (bIsDead) return;
@@ -162,6 +178,24 @@ void ACppCharacterBase::EnableInputControl()
 	{
 		AIC->GetBrainComponent()->RestartLogic();
 	}
+
+}
+
+void ACppCharacterBase::AddAbilityToUI(TSubclassOf<UCppGameplayAbilityBase> AbilityToAdd)
+{
+	ACppPlayerControllerBase* PlayerControllerBase = Cast<ACppPlayerControllerBase>(GetController());
+	if (PlayerControllerBase)
+	{
+		UCppGameplayAbilityBase* AbilityInstance = AbilityToAdd.Get()->GetDefaultObject<UCppGameplayAbilityBase>();
+		if (AbilityInstance)
+		{
+			FGameplayAbilityInfo AbilityInfo = AbilityInstance->GetAbilityInfo();
+			PlayerControllerBase->AddAbilityToUI(AbilityInfo);
+		}
+
+
+	}
+
 
 }
 

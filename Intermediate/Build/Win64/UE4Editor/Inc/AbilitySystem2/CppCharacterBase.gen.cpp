@@ -22,6 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_AquireAbility();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility_NoRegister();
+	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_BP_Die();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_BP_OnHelathChanged();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_BP_OnManaChanged();
@@ -74,6 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "AddGameplayTag", &ACppCharacterBase::execAddGameplayTag },
 			{ "AquireAbility", &ACppCharacterBase::execAquireAbility },
+			{ "AquireAbilitys", &ACppCharacterBase::execAquireAbilitys },
 			{ "EvCpp_HitStun", &ACppCharacterBase::execEvCpp_HitStun },
 			{ "FCppIsOtherHosttile", &ACppCharacterBase::execFCppIsOtherHosttile },
 			{ "OnHealthChanged", &ACppCharacterBase::execOnHealthChanged },
@@ -136,7 +138,9 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACppCharacterBase_AquireAbility_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
+		{ "Comment", "/** START AquireAbility */" },
 		{ "ModuleRelativePath", "Public/CppCharacterBase.h" },
+		{ "ToolTip", "START AquireAbility" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACppCharacterBase_AquireAbility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACppCharacterBase, nullptr, "AquireAbility", nullptr, nullptr, sizeof(CppCharacterBase_eventAquireAbility_Parms), Z_Construct_UFunction_ACppCharacterBase_AquireAbility_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACppCharacterBase_AquireAbility_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACppCharacterBase_AquireAbility_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACppCharacterBase_AquireAbility_Statics::Function_MetaDataParams)) };
@@ -146,6 +150,42 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACppCharacterBase_AquireAbility_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics
+	{
+		struct CppCharacterBase_eventAquireAbilitys_Parms
+		{
+			TArray<TSubclassOf<UGameplayAbility> > AbilityToAquires;
+		};
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_AbilityToAquires;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_AbilityToAquires_Inner;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::NewProp_AbilityToAquires = { "AbilityToAquires", nullptr, (EPropertyFlags)0x0014000000000080, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CppCharacterBase_eventAquireAbilitys_Parms, AbilityToAquires), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::NewProp_AbilityToAquires_Inner = { "AbilityToAquires", nullptr, (EPropertyFlags)0x0004000000000000, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UGameplayAbility_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::NewProp_AbilityToAquires,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::NewProp_AbilityToAquires_Inner,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "ModuleRelativePath", "Public/CppCharacterBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACppCharacterBase, nullptr, "AquireAbilitys", nullptr, nullptr, sizeof(CppCharacterBase_eventAquireAbilitys_Parms), Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -535,7 +575,8 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACppCharacterBase_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACppCharacterBase_AddGameplayTag, "AddGameplayTag" }, // 1835106227
-		{ &Z_Construct_UFunction_ACppCharacterBase_AquireAbility, "AquireAbility" }, // 3862457714
+		{ &Z_Construct_UFunction_ACppCharacterBase_AquireAbility, "AquireAbility" }, // 3229608771
+		{ &Z_Construct_UFunction_ACppCharacterBase_AquireAbilitys, "AquireAbilitys" }, // 2388622618
 		{ &Z_Construct_UFunction_ACppCharacterBase_BP_Die, "BP_Die" }, // 2096730044
 		{ &Z_Construct_UFunction_ACppCharacterBase_BP_OnHelathChanged, "BP_OnHelathChanged" }, // 1852279884
 		{ &Z_Construct_UFunction_ACppCharacterBase_BP_OnManaChanged, "BP_OnManaChanged" }, // 1014602804
@@ -614,7 +655,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACppCharacterBase, 2577647733);
+	IMPLEMENT_CLASS(ACppCharacterBase, 2040019389);
 	template<> ABILITYSYSTEM2_API UClass* StaticClass<ACppCharacterBase>()
 	{
 		return ACppCharacterBase::StaticClass();

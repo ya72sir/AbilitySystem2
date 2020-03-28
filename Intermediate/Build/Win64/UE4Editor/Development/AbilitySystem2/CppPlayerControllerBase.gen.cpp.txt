@@ -2,4 +2,6 @@ F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Development\AbilitySystem2\Defi
 F:\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 F:\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 F:\AbilitySys\Source\AbilitySystem2/Public/CppPlayerControllerBase.h
+f:\abilitysys\source\abilitysystem2\public\AbilityTypes.h
+f:\abilitysys\intermediate\build\win64\ue4editor\inc\abilitysystem2\AbilityTypes.generated.h
 f:\abilitysys\intermediate\build\win64\ue4editor\inc\abilitysystem2\CppPlayerControllerBase.generated.h

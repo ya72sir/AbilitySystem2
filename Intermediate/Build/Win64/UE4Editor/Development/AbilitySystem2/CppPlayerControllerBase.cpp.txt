@@ -1,3 +1,5 @@
 F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Development\AbilitySystem2\Definitions.AbilitySystem2.h
 F:\AbilitySys\Source\AbilitySystem2\Public\CppPlayerControllerBase.h
+f:\abilitysys\source\abilitysystem2\public\AbilityTypes.h
+F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Inc\AbilitySystem2\AbilityTypes.generated.h
 F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Inc\AbilitySystem2\CppPlayerControllerBase.generated.h

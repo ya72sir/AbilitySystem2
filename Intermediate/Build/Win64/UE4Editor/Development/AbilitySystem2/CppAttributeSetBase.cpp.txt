@@ -62,5 +62,11 @@ F:\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 F:\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 F:\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 F:\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+f:\abilitysys\source\abilitysystem2\public\CppPlayerControllerBase.h
+f:\abilitysys\source\abilitysystem2\public\AbilityTypes.h
+F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Inc\AbilitySystem2\AbilityTypes.generated.h
+F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Inc\AbilitySystem2\CppPlayerControllerBase.generated.h
+f:\abilitysys\source\abilitysystem2\public\CppGameplayAbilityBase.h
+F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Inc\AbilitySystem2\CppGameplayAbilityBase.generated.h
 F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Inc\AbilitySystem2\CppCharacterBase.generated.h
 F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Inc\AbilitySystem2\CppAttributeSetBase.generated.h

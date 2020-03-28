@@ -9,10 +9,14 @@
 #include "Abilities/GameplayAbility.h"
 
 #include "GameFramework/Character.h"
+#include "CppPlayerControllerBase.h"
+#include "CppGameplayAbilityBase.h"
+#include "CppPlayerControllerBase.h"
 
 #include "CppCharacterBase.generated.h"
 
 UCLASS()
+
 
  class ABILITYSYSTEM2_API ACppCharacterBase : public ACharacter, public IAbilitySystemInterface
 {
@@ -42,9 +46,15 @@ public:
 
 	UAbilitySystemComponent* GetAbilitySystemComponent() const override { return AbilitySystemComp; };
 
+	/** START AquireAbility */
+
 	UFUNCTION(BlueprintCallable, Category = "Abilities")
 	void AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAquire);
 
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+	void AquireAbilitys(TArray<TSubclassOf<UGameplayAbility>> AbilityToAquires);
+
+	/** END AquireAbility */
 
 	/** START changes param */
 	UFUNCTION()
@@ -92,4 +102,5 @@ protected:
 	void DisableInputControl();
 	void EnableInputControl();
 	FTimerHandle StunTimeHandle;
+	void AddAbilityToUI(TSubclassOf<UCppGameplayAbilityBase> AbilityToAdd);
 };
