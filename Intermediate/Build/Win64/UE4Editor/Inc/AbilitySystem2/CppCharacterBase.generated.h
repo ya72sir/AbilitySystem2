@@ -19,6 +19,15 @@ class UGameplayAbility;
 #define AbilitySys_Source_AbilitySystem2_Public_CppCharacterBase_h_19_SPARSE_DATA
 #define AbilitySys_Source_AbilitySystem2_Public_CppCharacterBase_h_19_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execEvCpp_HitStun) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_StunDuration); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->EvCpp_HitStun(Z_Param_StunDuration); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execRemoveGameplayTag) \
 	{ \
 		P_GET_STRUCT_REF(FGameplayTag,Z_Param_Out_TagToRemove); \
@@ -87,6 +96,15 @@ class UGameplayAbility;
 
 
 #define AbilitySys_Source_AbilitySystem2_Public_CppCharacterBase_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execEvCpp_HitStun) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_StunDuration); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->EvCpp_HitStun(Z_Param_StunDuration); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execRemoveGameplayTag) \
 	{ \

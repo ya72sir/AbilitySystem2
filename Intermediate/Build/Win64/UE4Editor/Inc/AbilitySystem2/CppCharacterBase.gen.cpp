@@ -26,6 +26,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_BP_OnHelathChanged();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_BP_OnManaChanged();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_BP_OnStrengthChanged();
+	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_OnHealthChanged();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppCharacterBase_OnManaChanged();
@@ -73,6 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "AddGameplayTag", &ACppCharacterBase::execAddGameplayTag },
 			{ "AquireAbility", &ACppCharacterBase::execAquireAbility },
+			{ "EvCpp_HitStun", &ACppCharacterBase::execEvCpp_HitStun },
 			{ "FCppIsOtherHosttile", &ACppCharacterBase::execFCppIsOtherHosttile },
 			{ "OnHealthChanged", &ACppCharacterBase::execOnHealthChanged },
 			{ "OnManaChanged", &ACppCharacterBase::execOnManaChanged },
@@ -278,6 +280,39 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACppCharacterBase_BP_OnStrengthChanged_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun_Statics
+	{
+		struct CppCharacterBase_eventEvCpp_HitStun_Parms
+		{
+			float StunDuration;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_StunDuration;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun_Statics::NewProp_StunDuration = { "StunDuration", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CppCharacterBase_eventEvCpp_HitStun_Parms, StunDuration), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun_Statics::NewProp_StunDuration,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "ModuleRelativePath", "Public/CppCharacterBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACppCharacterBase, nullptr, "EvCpp_HitStun", nullptr, nullptr, sizeof(CppCharacterBase_eventEvCpp_HitStun_Parms), Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -505,6 +540,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		{ &Z_Construct_UFunction_ACppCharacterBase_BP_OnHelathChanged, "BP_OnHelathChanged" }, // 1852279884
 		{ &Z_Construct_UFunction_ACppCharacterBase_BP_OnManaChanged, "BP_OnManaChanged" }, // 1014602804
 		{ &Z_Construct_UFunction_ACppCharacterBase_BP_OnStrengthChanged, "BP_OnStrengthChanged" }, // 306994254
+		{ &Z_Construct_UFunction_ACppCharacterBase_EvCpp_HitStun, "EvCpp_HitStun" }, // 2780034690
 		{ &Z_Construct_UFunction_ACppCharacterBase_FCppIsOtherHosttile, "FCppIsOtherHosttile" }, // 3017320488
 		{ &Z_Construct_UFunction_ACppCharacterBase_OnHealthChanged, "OnHealthChanged" }, // 2375483249
 		{ &Z_Construct_UFunction_ACppCharacterBase_OnManaChanged, "OnManaChanged" }, // 2806967758
@@ -578,7 +614,7 @@ void EmptyLinkFunctionForGeneratedCodeCppCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACppCharacterBase, 2875095318);
+	IMPLEMENT_CLASS(ACppCharacterBase, 2577647733);
 	template<> ABILITYSYSTEM2_API UClass* StaticClass<ACppCharacterBase>()
 	{
 		return ACppCharacterBase::StaticClass();

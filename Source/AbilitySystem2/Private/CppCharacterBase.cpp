@@ -123,9 +123,15 @@ void ACppCharacterBase::AutoDeterminTeamIDbyControllerType()
 
 void ACppCharacterBase::Dead()
 {
+	DisableInputControl();
+}
+
+void ACppCharacterBase::DisableInputControl()
+{
+
 	APlayerController* PC = Cast<APlayerController>(GetController());
 
-	if (PC) 
+	if (PC)
 	{
 		PC->DisableInput(PC);
 	}
@@ -138,3 +144,31 @@ void ACppCharacterBase::Dead()
 	}
 
 }
+
+void ACppCharacterBase::EnableInputControl()
+{
+	if (bIsDead) return; // если умер то на этом логика заканчивается
+
+	APlayerController* PC = Cast<APlayerController>(GetController());
+
+	if (PC)
+	{
+		PC->EnableInput(PC);
+	}
+
+	AAIController* AIC = Cast<AAIController>(GetController());
+
+	if (AIC)
+	{
+		AIC->GetBrainComponent()->RestartLogic();
+	}
+
+}
+
+void ACppCharacterBase::EvCpp_HitStun(float StunDuration)
+{
+	DisableInputControl();
+	GetWorldTimerManager().SetTimer(StunTimeHandle, this, &ACppCharacterBase::EnableInputControl, StunDuration, false);
+}
+
+
