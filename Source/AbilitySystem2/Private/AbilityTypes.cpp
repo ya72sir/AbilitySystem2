@@ -6,24 +6,21 @@
 FGameplayAbilityInfo::FGameplayAbilityInfo()
 	:	CoolDownDuration(0), 
 		Cost(0), 
-		CostType(EAilityCostType::Mana), 
+		CostType(EAbilityCostType::Mana),
 		UIMat(nullptr), 
 		AbilityClass(nullptr)
-
-
-
 {
 
 
 
 }
 
-FGameplayAbilityInfo::FGameplayAbilityInfo(float InCoolDownDuration, float InCost, EAilityCostType InCostType, UMaterialInterface* InUIMat, TSubclassOf<UCppGameplayAbilityBase> InAbilityClass)
-	: CoolDownDuration(InCoolDownDuration),
-	Cost(InCost),
-	CostType(InCostType),
-	UIMat(InUIMat),
-	AbilityClass(InAbilityClass)
+FGameplayAbilityInfo::FGameplayAbilityInfo(float InCoolDownDuration, float InCost, EAbilityCostType InCostType, UMaterialInterface* InUIMat, TSubclassOf<UCppGameplayAbilityBase> InAbilityClass)
+	:	CoolDownDuration(InCoolDownDuration),
+		Cost(InCost),
+		CostType(InCostType),
+		UIMat(InUIMat),
+		AbilityClass(InAbilityClass)
 {
 
 

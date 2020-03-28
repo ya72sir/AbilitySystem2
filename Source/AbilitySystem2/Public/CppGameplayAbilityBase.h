@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "Abilities/GameplayAbility.h"
+
+#include "AbilityTypes.h"
+
 #include "CppGameplayAbilityBase.generated.h"
 
 /**
@@ -19,5 +22,8 @@ class ABILITYSYSTEM2_API UCppGameplayAbilityBase : public UGameplayAbility
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AbilityBase")
 	UMaterialInstance* UIMaterial;
+
+	UFUNCTION(BlueprintCallable, Category = "AbilityBase")
+	FGameplayAbilityInfo GetAbilityInfo();
 	
 };

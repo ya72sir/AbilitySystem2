@@ -41,4 +41,6 @@ F:\UE_4.24\Engine\Source\Runtime\GameplayTasks\Classes\GameplayTaskOwnerInterfac
 F:\UE_4.24\Engine\Source\Runtime\GameplayTasks\Public\GameplayTaskTypes.h
 F:\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTasks\GameplayTaskOwnerInterface.generated.h
 F:\UE_4.24\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\GameplayAbility.generated.h
+f:\abilitysys\source\abilitysystem2\public\AbilityTypes.h
+F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Inc\AbilitySystem2\AbilityTypes.generated.h
 F:\AbilitySys\Intermediate\Build\Win64\UE4Editor\Inc\AbilitySystem2\CppGameplayAbilityBase.generated.h

@@ -6,16 +6,15 @@
 #include "GameFramework/Actor.h"
 #include "AbilityTypes.generated.h"
 
-
 class UCppGameplayAbilityBase;
 
 UENUM(BlueprintType)
-enum class EAilityCostType : uint8
+enum class EAbilityCostType : uint8
 {
 	Health,
 	Mana,
 	Strength
-}
+};
 
 
 USTRUCT(BlueprintType)
@@ -30,7 +29,7 @@ struct FGameplayAbilityInfo
 	float Cost;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AbilityInfo")
-	EAilityCostType CostType;
+	EAbilityCostType CostType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AbilityInfo")
 	UMaterialInterface* UIMat;
@@ -39,10 +38,6 @@ struct FGameplayAbilityInfo
 	TSubclassOf<UCppGameplayAbilityBase> AbilityClass;
 
 	FGameplayAbilityInfo();
-	FGameplayAbilityInfo(float CoolDownDuration, float Cost, EAilityCostType CostType, UMaterialInterface* UIMat, TSubclassOf<UCppGameplayAbilityBase> AbilityClass);
-
-
-
-
+	FGameplayAbilityInfo(float CoolDownDuration, float Cost, EAbilityCostType CostType, UMaterialInterface* UIMat, TSubclassOf<UCppGameplayAbilityBase> AbilityClass);
 
 };
