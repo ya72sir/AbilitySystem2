@@ -44,7 +44,7 @@ void ACppCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 }
 
 
-void ACppCharacterBase::AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAquire)
+void ACppCharacterBase::EvCpp_AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAquire)
 {
 	if (AbilitySystemComp)
 	{
@@ -62,11 +62,11 @@ void ACppCharacterBase::AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAqu
 	}
 }
 
-void ACppCharacterBase::AquireAbilitys(TArray<TSubclassOf<UGameplayAbility>> AbilityToAquires)
+void ACppCharacterBase::EvCpp_AquireAbilitys(TArray<TSubclassOf<UGameplayAbility>> AbilityToAquires)
 {
 	for (TSubclassOf<UGameplayAbility> AbilityItem : AbilityToAquires)
 	{
-		AquireAbility(AbilityItem);
+		EvCpp_AquireAbility(AbilityItem);
 		
 		if (AbilityItem->IsChildOf(UCppGameplayAbilityBase::StaticClass()))
 		{

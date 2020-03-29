@@ -85,21 +85,21 @@ class UGameplayAbility;
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execAquireAbilitys) \
+	DECLARE_FUNCTION(execEvCpp_AquireAbilitys) \
 	{ \
 		P_GET_TARRAY(TSubclassOf<UGameplayAbility> ,Z_Param_AbilityToAquires); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->AquireAbilitys(Z_Param_AbilityToAquires); \
+		P_THIS->EvCpp_AquireAbilitys(Z_Param_AbilityToAquires); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execAquireAbility) \
+	DECLARE_FUNCTION(execEvCpp_AquireAbility) \
 	{ \
 		P_GET_OBJECT(UClass,Z_Param_AbilityToAquire); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->AquireAbility(Z_Param_AbilityToAquire); \
+		P_THIS->EvCpp_AquireAbility(Z_Param_AbilityToAquire); \
 		P_NATIVE_END; \
 	}
 
@@ -172,21 +172,21 @@ class UGameplayAbility;
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execAquireAbilitys) \
+	DECLARE_FUNCTION(execEvCpp_AquireAbilitys) \
 	{ \
 		P_GET_TARRAY(TSubclassOf<UGameplayAbility> ,Z_Param_AbilityToAquires); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->AquireAbilitys(Z_Param_AbilityToAquires); \
+		P_THIS->EvCpp_AquireAbilitys(Z_Param_AbilityToAquires); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execAquireAbility) \
+	DECLARE_FUNCTION(execEvCpp_AquireAbility) \
 	{ \
 		P_GET_OBJECT(UClass,Z_Param_AbilityToAquire); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->AquireAbility(Z_Param_AbilityToAquire); \
+		P_THIS->EvCpp_AquireAbility(Z_Param_AbilityToAquire); \
 		P_NATIVE_END; \
 	}
 

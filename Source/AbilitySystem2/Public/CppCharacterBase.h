@@ -49,10 +49,10 @@ public:
 	/** START AquireAbility */
 
 	UFUNCTION(BlueprintCallable, Category = "Abilities")
-	void AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAquire);
+	void EvCpp_AquireAbility(TSubclassOf<UGameplayAbility> AbilityToAquire);
 
 	UFUNCTION(BlueprintCallable, Category = "Abilities")
-	void AquireAbilitys(TArray<TSubclassOf<UGameplayAbility>> AbilityToAquires);
+	void EvCpp_AquireAbilitys(TArray<TSubclassOf<UGameplayAbility>> AbilityToAquires);
 
 	/** END AquireAbility */
 
