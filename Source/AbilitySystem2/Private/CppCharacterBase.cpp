@@ -192,11 +192,7 @@ void ACppCharacterBase::AddAbilityToUI(TSubclassOf<UCppGameplayAbilityBase> Abil
 			FGameplayAbilityInfo AbilityInfo = AbilityInstance->GetAbilityInfo();
 			PlayerControllerBase->AddAbilityToUI(AbilityInfo);
 		}
-
-
 	}
-
-
 }
 
 void ACppCharacterBase::EvCpp_HitStun(float StunDuration)
