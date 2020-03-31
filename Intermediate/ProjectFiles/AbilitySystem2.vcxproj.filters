@@ -102,12 +102,18 @@
     <ClInclude Include="..\..\Source\AbilitySystem2\Public\AbilityTypes.h">
       <Filter>Source\AbilitySystem2\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\AbilitySystem2\Public\CppGATargetActorGroundSelect.h">
+      <Filter>Source\AbilitySystem2\Public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\AbilitySystem2\Private\CppGameplayAbilityBase.cpp">
       <Filter>Source\AbilitySystem2\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\AbilitySystem2\Private\AbilityTypes.cpp">
+      <Filter>Source\AbilitySystem2\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AbilitySystem2\Private\CppGATargetActorGroundSelect.cpp">
       <Filter>Source\AbilitySystem2\Private</Filter>
     </ClCompile>
   </ItemGroup>

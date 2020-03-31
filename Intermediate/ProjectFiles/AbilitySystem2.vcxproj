@@ -391,11 +391,13 @@
     <ClCompile Include="..\..\Source\AbilitySystem2\Private\CppAttributeSetBase.cpp" />
     <ClCompile Include="..\..\Source\AbilitySystem2\Private\CppCharacterBase.cpp" />
     <ClCompile Include="..\..\Source\AbilitySystem2\Private\CppGameplayAbilityBase.cpp" />
+    <ClCompile Include="..\..\Source\AbilitySystem2\Private\CppGATargetActorGroundSelect.cpp" />
     <ClCompile Include="..\..\Source\AbilitySystem2\Private\CppPlayerControllerBase.cpp" />
     <ClInclude Include="..\..\Source\AbilitySystem2\Public\AbilityTypes.h" />
     <ClInclude Include="..\..\Source\AbilitySystem2\Public\CppAttributeSetBase.h" />
     <ClInclude Include="..\..\Source\AbilitySystem2\Public\CppCharacterBase.h" />
     <ClInclude Include="..\..\Source\AbilitySystem2\Public\CppGameplayAbilityBase.h" />
+    <ClInclude Include="..\..\Source\AbilitySystem2\Public\CppGATargetActorGroundSelect.h" />
     <ClInclude Include="..\..\Source\AbilitySystem2\Public\CppPlayerControllerBase.h" />
   </ItemGroup>
   <PropertyGroup>
