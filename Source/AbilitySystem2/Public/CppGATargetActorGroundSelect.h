@@ -6,8 +6,10 @@
 #include "Abilities/GameplayAbilityTargetActor.h"
 #include "GameFramework/PlayerController.h"
 #include "Abilities/GameplayAbility.h"
+#include "GameFramework/Pawn.h"
 
 #include "CppGATargetActorGroundSelect.generated.h"
+
 
 
 /**
@@ -21,4 +23,12 @@ class ABILITYSYSTEM2_API ACppGATargetActorGroundSelect : public AGameplayAbility
 public:
 	virtual void StartTargeting(UGameplayAbility* Ability) override;
 	virtual void ConfirmTargetingAndContinue() override;
+	virtual void Tick(float DeltaSeconds) override;
+
+
+	UFUNCTION(BlueprintCallable, Category = "GroundSelect")
+	bool GetPlayerLocatioinPoint(FVector& OutViewPoint);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GroundSelect")
+	float Radius;
 };

@@ -8,15 +8,38 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FVector;
 #ifdef ABILITYSYSTEM2_CppGATargetActorGroundSelect_generated_h
 #error "CppGATargetActorGroundSelect.generated.h already included, missing '#pragma once' in CppGATargetActorGroundSelect.h"
 #endif
 #define ABILITYSYSTEM2_CppGATargetActorGroundSelect_generated_h
 
-#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_SPARSE_DATA
-#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_RPC_WRAPPERS
-#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_RPC_WRAPPERS_NO_PURE_DECLS
-#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_INCLASS_NO_PURE_DECLS \
+#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_SPARSE_DATA
+#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetPlayerLocatioinPoint) \
+	{ \
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_OutViewPoint); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->GetPlayerLocatioinPoint(Z_Param_Out_OutViewPoint); \
+		P_NATIVE_END; \
+	}
+
+
+#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetPlayerLocatioinPoint) \
+	{ \
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_OutViewPoint); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->GetPlayerLocatioinPoint(Z_Param_Out_OutViewPoint); \
+		P_NATIVE_END; \
+	}
+
+
+#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACppGATargetActorGroundSelect(); \
 	friend struct Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics; \
@@ -25,7 +48,7 @@ public: \
 	DECLARE_SERIALIZER(ACppGATargetActorGroundSelect)
 
 
-#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_INCLASS \
+#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_INCLASS \
 private: \
 	static void StaticRegisterNativesACppGATargetActorGroundSelect(); \
 	friend struct Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics; \
@@ -34,7 +57,7 @@ public: \
 	DECLARE_SERIALIZER(ACppGATargetActorGroundSelect)
 
 
-#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_STANDARD_CONSTRUCTORS \
+#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ACppGATargetActorGroundSelect(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACppGATargetActorGroundSelect) \
@@ -47,7 +70,7 @@ private: \
 public:
 
 
-#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_ENHANCED_CONSTRUCTORS \
+#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ACppGATargetActorGroundSelect(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -60,28 +83,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACppGATargetActorGroundSelect); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACppGATargetActorGroundSelect)
 
 
-#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_PRIVATE_PROPERTY_OFFSET
-#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_16_PROLOG
-#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_GENERATED_BODY_LEGACY \
+#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_PRIVATE_PROPERTY_OFFSET
+#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_18_PROLOG
+#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_PRIVATE_PROPERTY_OFFSET \
-	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_SPARSE_DATA \
-	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_RPC_WRAPPERS \
-	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_INCLASS \
-	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_STANDARD_CONSTRUCTORS \
+	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_PRIVATE_PROPERTY_OFFSET \
+	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_SPARSE_DATA \
+	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_RPC_WRAPPERS \
+	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_INCLASS \
+	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_GENERATED_BODY \
+#define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_PRIVATE_PROPERTY_OFFSET \
-	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_SPARSE_DATA \
-	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_INCLASS_NO_PURE_DECLS \
-	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_19_ENHANCED_CONSTRUCTORS \
+	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_PRIVATE_PROPERTY_OFFSET \
+	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_SPARSE_DATA \
+	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_INCLASS_NO_PURE_DECLS \
+	AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
