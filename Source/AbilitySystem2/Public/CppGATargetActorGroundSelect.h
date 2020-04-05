@@ -21,6 +21,8 @@ class ABILITYSYSTEM2_API ACppGATargetActorGroundSelect : public AGameplayAbility
 	GENERATED_BODY()
 	
 public:
+	ACppGATargetActorGroundSelect();
+
 	virtual void StartTargeting(UGameplayAbility* Ability) override;
 	virtual void ConfirmTargetingAndContinue() override;
 	virtual void Tick(float DeltaSeconds) override;
@@ -29,6 +31,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "GroundSelect")
 	bool GetPlayerLocatioinPoint(FVector& OutViewPoint);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GroundSelect")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GroundSelect", meta = (ExposeOnSpawn = True))
 	float Radius;
 };

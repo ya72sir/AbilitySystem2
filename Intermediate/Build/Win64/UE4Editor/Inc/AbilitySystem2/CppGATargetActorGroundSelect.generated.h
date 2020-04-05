@@ -59,7 +59,7 @@ public: \
 
 #define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ACppGATargetActorGroundSelect(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API ACppGATargetActorGroundSelect(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACppGATargetActorGroundSelect) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ACppGATargetActorGroundSelect); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACppGATargetActorGroundSelect); \
@@ -71,8 +71,6 @@ public:
 
 
 #define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ACppGATargetActorGroundSelect(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACppGATargetActorGroundSelect(ACppGATargetActorGroundSelect&&); \
@@ -80,7 +78,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ACppGATargetActorGroundSelect); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACppGATargetActorGroundSelect); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACppGATargetActorGroundSelect)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACppGATargetActorGroundSelect)
 
 
 #define AbilitySys_Source_AbilitySystem2_Public_CppGATargetActorGroundSelect_h_21_PRIVATE_PROPERTY_OFFSET

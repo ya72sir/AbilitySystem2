@@ -4,6 +4,12 @@
 
 #include "CppGATargetActorGroundSelect.h"
 
+ACppGATargetActorGroundSelect::ACppGATargetActorGroundSelect()
+{
+	PrimaryActorTick.bCanEverTick = true;
+}
+
+
 void ACppGATargetActorGroundSelect::StartTargeting(UGameplayAbility* Ability)
 {
 	OwningAbility = Ability;
@@ -70,7 +76,7 @@ void ACppGATargetActorGroundSelect::Tick(float DeltaSeconds)
 
 	FVector LookPoint;
 	GetPlayerLocatioinPoint(LookPoint);
-	DrawDebugSphere(GetWorld(), LookPoint, Radius, 32, FColor::Red, true, -1, 0, 5.0f);
+	DrawDebugSphere(GetWorld(), LookPoint, Radius, 32, FColor::Red, false, -1, 0, 5.0f);
 
 }
 

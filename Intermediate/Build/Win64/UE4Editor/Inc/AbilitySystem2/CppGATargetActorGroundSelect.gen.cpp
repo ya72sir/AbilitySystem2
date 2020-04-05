@@ -106,10 +106,11 @@ void EmptyLinkFunctionForGeneratedCodeCppGATargetActorGroundSelect() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius_MetaData[] = {
 		{ "Category", "GroundSelect" },
+		{ "ExposeOnSpawn", "TRUE" },
 		{ "ModuleRelativePath", "Public/CppGATargetActorGroundSelect.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius = { "Radius", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACppGATargetActorGroundSelect, Radius), METADATA_PARAMS(Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius = { "Radius", nullptr, (EPropertyFlags)0x0011000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACppGATargetActorGroundSelect, Radius), METADATA_PARAMS(Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius,
 	};
@@ -140,7 +141,7 @@ void EmptyLinkFunctionForGeneratedCodeCppGATargetActorGroundSelect() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACppGATargetActorGroundSelect, 3808040232);
+	IMPLEMENT_CLASS(ACppGATargetActorGroundSelect, 3056390463);
 	template<> ABILITYSYSTEM2_API UClass* StaticClass<ACppGATargetActorGroundSelect>()
 	{
 		return ACppGATargetActorGroundSelect::StaticClass();
