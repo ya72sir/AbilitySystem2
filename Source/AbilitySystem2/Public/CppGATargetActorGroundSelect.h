@@ -8,6 +8,9 @@
 #include "Abilities/GameplayAbility.h"
 #include "GameFramework/Pawn.h"
 
+#include "Components/DecalComponent.h"
+#include "Components/SceneComponent.h"
+
 #include "CppGATargetActorGroundSelect.generated.h"
 
 
@@ -33,4 +36,10 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GroundSelect", meta = (ExposeOnSpawn = True))
 	float Radius;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "GroundBlast")
+	UDecalComponent* Decal;
+
+	USceneComponent* RootComp;
+
 };

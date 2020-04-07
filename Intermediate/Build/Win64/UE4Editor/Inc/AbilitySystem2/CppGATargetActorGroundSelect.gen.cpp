@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeCppGATargetActorGroundSelect() {}
 	UPackage* Z_Construct_UPackage__Script_AbilitySystem2();
 	ABILITYSYSTEM2_API UFunction* Z_Construct_UFunction_ACppGATargetActorGroundSelect_GetPlayerLocatioinPoint();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	ENGINE_API UClass* Z_Construct_UClass_UDecalComponent_NoRegister();
 // End Cross Module References
 	void ACppGATargetActorGroundSelect::StaticRegisterNativesACppGATargetActorGroundSelect()
 	{
@@ -82,6 +83,10 @@ void EmptyLinkFunctionForGeneratedCodeCppGATargetActorGroundSelect() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Decal_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Decal;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Radius_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Radius;
@@ -104,6 +109,14 @@ void EmptyLinkFunctionForGeneratedCodeCppGATargetActorGroundSelect() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Decal_MetaData[] = {
+		{ "Category", "GroundBlast" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CppGATargetActorGroundSelect.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Decal = { "Decal", nullptr, (EPropertyFlags)0x00100000000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACppGATargetActorGroundSelect, Decal), Z_Construct_UClass_UDecalComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Decal_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Decal_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius_MetaData[] = {
 		{ "Category", "GroundSelect" },
 		{ "ExposeOnSpawn", "TRUE" },
@@ -112,6 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeCppGATargetActorGroundSelect() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius = { "Radius", nullptr, (EPropertyFlags)0x0011000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACppGATargetActorGroundSelect, Radius), METADATA_PARAMS(Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Decal,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::NewProp_Radius,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACppGATargetActorGroundSelect_Statics::StaticCppClassTypeInfo = {
@@ -141,7 +155,7 @@ void EmptyLinkFunctionForGeneratedCodeCppGATargetActorGroundSelect() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACppGATargetActorGroundSelect, 3056390463);
+	IMPLEMENT_CLASS(ACppGATargetActorGroundSelect, 1706445091);
 	template<> ABILITYSYSTEM2_API UClass* StaticClass<ACppGATargetActorGroundSelect>()
 	{
 		return ACppGATargetActorGroundSelect::StaticClass();

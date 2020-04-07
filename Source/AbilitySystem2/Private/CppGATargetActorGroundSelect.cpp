@@ -7,6 +7,15 @@
 ACppGATargetActorGroundSelect::ACppGATargetActorGroundSelect()
 {
 	PrimaryActorTick.bCanEverTick = true;
+
+	Decal = CreateDefaultSubobject<UDecalComponent>("Decal");
+	RootComp = CreateDefaultSubobject<USceneComponent>("RootComp");
+
+	SetRootComponent(RootComp);
+	Decal->SetupAttachment(RootComp);
+
+	Radius = 200.0f;
+	Decal->DecalSize = FVector(Radius);
 }
 
 
@@ -15,6 +24,8 @@ void ACppGATargetActorGroundSelect::StartTargeting(UGameplayAbility* Ability)
 	OwningAbility = Ability;
 
 	MasterPC = Cast<APlayerController>(Ability->GetOwningActorFromActorInfo()->GetInstigatorController());
+
+	Decal->DecalSize = FVector(Radius);
 }
 
 void ACppGATargetActorGroundSelect::ConfirmTargetingAndContinue()
@@ -76,7 +87,8 @@ void ACppGATargetActorGroundSelect::Tick(float DeltaSeconds)
 
 	FVector LookPoint;
 	GetPlayerLocatioinPoint(LookPoint);
-	DrawDebugSphere(GetWorld(), LookPoint, Radius, 32, FColor::Red, false, -1, 0, 5.0f);
+
+	Decal->SetWorldLocation(LookPoint);
 
 }
 
