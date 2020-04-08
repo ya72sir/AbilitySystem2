@@ -70,14 +70,19 @@ void ACppGATargetActorGroundSelect::ConfirmTargetingAndContinue()
 		}
 	}
 
+	FGameplayAbilityTargetData_LocationInfo* CenterLocation = new FGameplayAbilityTargetData_LocationInfo();
+	
+	if (Decal) CenterLocation->TargetLocation.LiteralTransform = Decal->GetComponentTransform();
+
 	if (OverlapedActors.Num() > 0)
 	{
 		FGameplayAbilityTargetDataHandle TargetData = StartLocation.MakeTargetDataHandleFromActors(OverlapedActors);
+		TargetData.Add(CenterLocation);
 		TargetDataReadyDelegate.Broadcast(TargetData);
 	}
 	else 
 	{
-		TargetDataReadyDelegate.Broadcast(FGameplayAbilityTargetDataHandle());
+		TargetDataReadyDelegate.Broadcast(FGameplayAbilityTargetDataHandle(CenterLocation));
 	}
 }
 
