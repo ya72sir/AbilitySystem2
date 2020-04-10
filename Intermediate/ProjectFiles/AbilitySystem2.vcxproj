@@ -365,6 +365,8 @@
     <NMakeOutput>..\..\Binaries\Android\AbilitySystem2-Android-Shipping.so</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\AbilitySystem2\Private\CppTargetActorGetAround.cpp" />
+    <ClInclude Include="..\..\Source\AbilitySystem2\Public\CppTargetActorGetAround.h" />
     <None Include="..\..\AbilitySystem2.uproject" />
     <None Include="..\..\Source\AbilitySystem2.Target.cs" />
     <None Include="..\..\Source\AbilitySystem2Editor.Target.cs" />
