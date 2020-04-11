@@ -41,6 +41,7 @@ void ACppGATargetActorGroundSelect::ConfirmTargetingAndContinue()
 	CollisionQueryParams.bTraceComplex = TraceComplex;
 	CollisionQueryParams.bReturnPhysicalMaterial = false;
 	APawn* MasterPawn = MasterPC->GetPawn();
+
 	if (MasterPawn)
 	{
 		CollisionQueryParams.AddIgnoredActor(MasterPawn->GetUniqueID());
