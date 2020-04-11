@@ -43,7 +43,7 @@ void ACppGATargetActorGroundSelect::ConfirmTargetingAndContinue()
 	APawn* MasterPawn = MasterPC->GetPawn();
 	if (MasterPawn)
 	{
-		CollisionQueryParams.AddIgnoredActor(MasterPC->GetUniqueID());
+		CollisionQueryParams.AddIgnoredActor(MasterPawn->GetUniqueID());
 	}
 
 	bool TryOverlap = GetWorld()->OverlapMultiByObjectType

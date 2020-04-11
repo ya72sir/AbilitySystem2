@@ -25,7 +25,6 @@ void ACppTargetActorGetAround::ConfirmTargetingAndContinue()
 		return;
 	}
 
-
 	FVector ViewLocation = OwningPawn -> GetActorLocation();
 
 	TArray<FOverlapResult> Overlaps;
@@ -35,10 +34,12 @@ void ACppTargetActorGetAround::ConfirmTargetingAndContinue()
 	FCollisionQueryParams CollisionQueryParams;
 	CollisionQueryParams.bTraceComplex = TraceComplex;
 	CollisionQueryParams.bReturnPhysicalMaterial = false;
+
 	APawn* MasterPawn = MasterPC->GetPawn();
+
 	if (MasterPawn)
 	{
-		CollisionQueryParams.AddIgnoredActor(MasterPC->GetUniqueID());
+		CollisionQueryParams.AddIgnoredActor(MasterPawn->GetUniqueID());
 	}
 
 	bool TryOverlap = GetWorld()->OverlapMultiByObjectType
@@ -60,6 +61,7 @@ void ACppTargetActorGetAround::ConfirmTargetingAndContinue()
 			if (PawnOverlaped && !OverlapedActors.Contains(PawnOverlaped))
 			{
 				OverlapedActors.Add(PawnOverlaped);
+				UE_LOG(LogTemp, Warning, TEXT("Your message - %s"), *(PawnOverlaped->GetName()));
 			}
 		}
 	}
